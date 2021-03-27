@@ -4,6 +4,8 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+  profiles:
+    include: oauth
 
   jpa:
     hibernate:
@@ -12,6 +14,9 @@ spring:
       hibernate:
         format_sql: true
         use_sql_comments: true
+
+
+
 logging:
   level:
     org.hibernate.SQL: debug
