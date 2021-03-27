@@ -1,3 +1,6 @@
+### Oauth ###
+application-oauth.yml
+
 HELP.md
 .gradle
 build/
@@ -37,5 +40,3 @@ out/
 .vscode/
 
 
-### Oauth ###
-application-oauth.yml
