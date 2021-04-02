@@ -5,12 +5,13 @@ import com.example.springandaws.domain.user.Role;
 import com.example.springandaws.domain.user.User;
 import com.nimbusds.langtag.ReadOnlyLangTag;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 
 import javax.persistence.Entity;
 import java.util.Map;
 
-@Getter
+@Data
 public class OAuthAttributes {
 
     private Map<String, Object> attributes;

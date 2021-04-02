@@ -1,5 +1,7 @@
 package com.example.springandaws.config.auth;
 
+import com.example.springandaws.config.auth.dto.OAuthAttributes;
+import com.example.springandaws.config.auth.dto.SessionUser;
 import com.example.springandaws.domain.user.User;
 import com.example.springandaws.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +46,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
     }
 
     private User saveOrUpdate(OAuthAttributes attributes){
-        userRepository.findByEmail(attributes.getEmail())
+        User user = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
                 .orElse(attributes.toEntity());
 
